@@ -4,7 +4,7 @@ export default function Navbar(props) {
   const { score } = props;
   return (
     <nav
-      className="navbar is-flex has-shadow is-justify-content-space-between"
+      className="navbar is-fixed-top is-flex is-justify-content-space-between"
       role="navigation"
       aria-label="main navigation"
     >

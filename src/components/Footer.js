@@ -2,9 +2,15 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="footer py-5">
+    <footer className="footer pt-5 pb-0">
       <div className="content has-text-centered">
-        <p>Made with Love by Rahim Ratnani</p>
+        <p className="has-text-weight-bold">Made with love by Rahim Ratnani</p>
+        <p>
+          Image credit:{" "}
+          <a className="has-text-dark burst" href="https://burst.shopify.com/">
+            Burst
+          </a>
+        </p>
         <div className="is-flex social is-flex-direction-row is-justify-content-center is-align-items-center">
           <p className="mb-5">Follow me on: </p>
           <a href="https://github.com/rahimratnani">

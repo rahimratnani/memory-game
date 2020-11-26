@@ -12,6 +12,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: #eeead1;
+}
+
+.navbar {
+  background-color: #fec89a;
 }
 
 .column .box {
@@ -21,4 +27,12 @@ body {
 
 .column .box:hover {
   box-shadow: 0 12px 24px #999, 0 12px 24px #999;
+}
+
+.footer {
+  background-color: #fec89a;
+}
+
+.burst:hover {
+  text-decoration: underline;
 }

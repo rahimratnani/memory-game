@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Grid from "./components/Grid";
 import Navbar from "./components/Navbar";
+import Modal from "./components/Modal";
+import Footer from "./components/Footer";
 import {
   img1,
   img2,
@@ -15,7 +17,6 @@ import {
   img11,
   img12,
 } from "./assets/index";
-import Modal from "./components/Modal";
 
 const shuffle = (arr) => {
   let arrLength = arr.length;
@@ -58,28 +59,44 @@ export default function App() {
 
   const [clicks, setClicks] = useState([]);
 
+  const [modal, setModal] = useState(["modal"]);
+
+  const [win, setWin] = useState(false);
+
+  const [isGameOver, setIsGameOver] = useState(false);
+
   // functions
   const handleShuffle = () => {
     setImages((prevState) => shuffle(prevState));
   };
 
-  const handleCardClick = (e) => {
-    handleShuffle();
-    if (clicks.includes(e.target.getAttribute("data-target"))) {
-      setClicks([]);
-
-      // set top score
-      if (score.score > score.topScore) {
-        setScore((prevState) => ({
-          ...prevState,
-          topScore: prevState.score,
-        }));
-      }
-
+  const handleGameOver = () => {
+    setClicks([]);
+    // set top score
+    if (score.score > score.topScore) {
       setScore((prevState) => ({
         ...prevState,
-        score: 0,
+        topScore: prevState.score,
       }));
+    }
+
+    // set game over
+    setIsGameOver(true);
+
+    // drop the modal
+    setModal(["modal", "is-active"]);
+
+    // set score to zero
+    // setScore((prevState) => ({
+    //   ...prevState,
+    //   score: 0,
+    // }));
+  };
+
+  const handleCardClick = (e) => {
+    if (clicks.includes(e.target.getAttribute("data-target"))) {
+      setModal(["modal", "is-active"]);
+      handleGameOver();
     } else {
       setClicks((prevState) => [
         ...prevState,
@@ -89,7 +106,21 @@ export default function App() {
         ...prevState,
         score: prevState.score + 1,
       }));
+      handleShuffle();
     }
+  };
+
+  const handleRestart = () => {
+    setIsGameOver(false);
+    setModal(["modal"]);
+    if (win) {
+      setWin(false);
+    }
+    handleShuffle();
+    setScore((prevState) => ({
+      ...prevState,
+      score: 0,
+    }));
   };
 
   //Effects
@@ -109,11 +140,25 @@ export default function App() {
       );
   });
 
+  useEffect(() => {
+    if (score.score === 12) {
+      setWin(true);
+      handleGameOver();
+    }
+  }, [score.score]);
+
   return (
     <div>
-      <Modal />
+      <Modal
+        modal={modal}
+        restart={handleRestart}
+        win={win}
+        isGameOver={isGameOver}
+        score={score}
+      />
       <Navbar score={score} />
       <Grid images={images} />
+      <Footer />
     </div>
   );
 }

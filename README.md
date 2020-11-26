@@ -3,7 +3,7 @@
 **How to play?**    
 Click on all 12 images without clicking on any image twice. Each click has 1 point.  
 
-This project is completely built using React hooks. See it live [here]()  
+This project is completely built using React hooks. See it live [here](https://rahimratnani.github.io/memory-game/)  
 
 Technologies used:
 1. React

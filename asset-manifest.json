@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/memory-game/static/css/main.14f57b0d.chunk.css",
+    "main.js": "/memory-game/static/js/main.cedd98d6.chunk.js",
+    "main.js.map": "/memory-game/static/js/main.cedd98d6.chunk.js.map",
+    "runtime-main.js": "/memory-game/static/js/runtime-main.a163e537.js",
+    "runtime-main.js.map": "/memory-game/static/js/runtime-main.a163e537.js.map",
+    "static/js/2.d063f0a0.chunk.js": "/memory-game/static/js/2.d063f0a0.chunk.js",
+    "static/js/2.d063f0a0.chunk.js.map": "/memory-game/static/js/2.d063f0a0.chunk.js.map",
+    "index.html": "/memory-game/index.html",
+    "static/css/main.14f57b0d.chunk.css.map": "/memory-game/static/css/main.14f57b0d.chunk.css.map",
+    "static/js/2.d063f0a0.chunk.js.LICENSE.txt": "/memory-game/static/js/2.d063f0a0.chunk.js.LICENSE.txt",
+    "static/media/img-1.717284c3.jpg": "/memory-game/static/media/img-1.717284c3.jpg",
+    "static/media/img-10.8a70979f.jpg": "/memory-game/static/media/img-10.8a70979f.jpg",
+    "static/media/img-11.82510d67.jpg": "/memory-game/static/media/img-11.82510d67.jpg",
+    "static/media/img-12.db53bf4e.jpg": "/memory-game/static/media/img-12.db53bf4e.jpg",
+    "static/media/img-2.c6bfef08.jpg": "/memory-game/static/media/img-2.c6bfef08.jpg",
+    "static/media/img-3.7b2ed937.jpg": "/memory-game/static/media/img-3.7b2ed937.jpg",
+    "static/media/img-4.82f9f8f3.jpg": "/memory-game/static/media/img-4.82f9f8f3.jpg",
+    "static/media/img-5.2de8588a.jpg": "/memory-game/static/media/img-5.2de8588a.jpg",
+    "static/media/img-6.a10221e4.jpg": "/memory-game/static/media/img-6.a10221e4.jpg",
+    "static/media/img-7.3a80b595.jpg": "/memory-game/static/media/img-7.3a80b595.jpg",
+    "static/media/img-8.707d3379.jpg": "/memory-game/static/media/img-8.707d3379.jpg",
+    "static/media/img-9.be15a116.jpg": "/memory-game/static/media/img-9.be15a116.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a163e537.js",
+    "static/js/2.d063f0a0.chunk.js",
+    "static/css/main.14f57b0d.chunk.css",
+    "static/js/main.cedd98d6.chunk.js"
+  ]
+}
